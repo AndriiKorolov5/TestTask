@@ -1,0 +1,104 @@
+.comments {
+    width: 100%;
+    padding: 70px 0;
+    background-color: #f8f8f8;
+    &__container {
+        @include flex-column-center-center
+    }
+}
+.reviews {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    &__carousel-inner {
+        width: 90%;
+        max-width: 980px;
+    }
+    &__slide {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        column-gap: 60px;
+        align-items: center;
+        @media only screen and (max-width: 800px) {
+            column-gap: 20px;
+        }
+    
+    }
+    &__img-box {
+        width: 144px;
+        height: 144px;
+        border: 3px solid $main-green;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @media only screen and (max-width: 800px) {
+            width: 110px;
+            height: 110px;
+        }
+        @media only screen and (max-width: 600px) {
+            width: 70px;
+            height: 70px;
+        }
+    }
+    &__icon {
+        fill: $main-green;
+        width: 46%;
+        height: 46%;
+    }
+    &__image {
+        width: 210px;
+        height: 210px;
+        border-radius: 50%;
+        @media only screen and (max-width: 800px) {
+            width: 110px;
+            height: 110px;
+        }
+        @media only screen and (max-width: 600px) {
+            width: 70px;
+            height: 70px;
+        }
+    }
+    &__text {
+        font-size: 24px;
+        font-family: "Roboto Light";
+        color: rgb(153, 153, 153);
+        font-style: italic;
+        line-height: 1.5;
+        text-align: left;
+        margin-bottom: 7px;
+        @media only screen and (max-width: 800px) {
+            font-size: 21px;
+            line-height: 1.1;
+        }
+        @media only screen and (max-width: 800px) {
+            font-size: 16px;
+        }
+    }
+    &__bottom {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 15px;
+    }
+    &__line {
+        @include horizontal-line($main-red);
+        margin-bottom: 0px;
+    }
+    &__name {
+        font-size: 24px;
+        font-family: "Kaushan Script";
+        color: rgb(51, 51, 51);
+        line-height: 1.2;
+        text-align: left;
+    }
+    &__carousel-control-prev,
+    &__carousel-control-next {
+        width: auto;
+    }
+    &__arrow {
+        width: 12px;
+        height: 22px;
+        fill: #cfcfcf;
+    }
+}
+

@@ -1,0 +1,87 @@
+.clients {
+    width: 100%;
+    padding: 122px 0;
+    background-image: url(../img/clients-bg.jpg);
+    background-color: rgba(255,255,255,0.8);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: color;
+    @media only screen and (max-width: 800px) {
+        padding: 55px 0;
+    }
+    &__container {
+        @include flex-column-center-center;
+    }
+    @include block-head;
+    &__wrap {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 40px;
+    }
+    &__client {
+        width: 100%;
+        max-width: 550px;
+        min-width: 310px;
+        flex-basis: 450px;
+        flex-grow: 1;
+    }
+}
+.client {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 20px;
+    &__avatar {
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+        @media only screen and (max-width: 800px) {
+            width: 70px;
+            height: 70px;
+        }
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    &__name {
+        font-size: 14px;
+        font-weight: 700;
+        font-family: "Montserrat";
+        color: rgb(51, 51, 51);
+        text-transform: uppercase;
+        line-height: 1.2;
+        text-align: left;
+        margin-bottom: 10px;
+        @media only screen and (max-width: 800px) {
+            line-height: 100%;
+        }
+    }
+    &__post {
+        font-size: 15px;
+        font-family: "Roboto Light";
+        color: rgb(51, 51, 51);
+        font-style: italic;
+        line-height: 1.2;
+        text-align: left;
+        margin-bottom: 10px;
+    }
+    &__line {
+        @include horizontal-line($main-red);
+        margin-bottom: 10px;
+    }
+    &__message {
+        font-size: 15px;
+        font-family: "Roboto";
+        color: rgb(153, 153, 153);
+        line-height: 1.6;
+        text-align: left;
+        margin-bottom: 0px;
+        @media only screen and (max-width: 800px) {
+            line-height: 1.1;
+        }
+    }
+}

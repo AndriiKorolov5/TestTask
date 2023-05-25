@@ -1,0 +1,155 @@
+.hero {
+    width: 100%;
+    &__carousel {
+        display: flex;
+        justify-content: center;
+    }
+    &__container {
+        position: absolute;
+        z-index: 15;
+        @include flex-column-center-center;
+        top: 25%;
+        @media only screen and (max-width: 991px){
+            top: 13%;
+        }
+    }
+    &__slogan {
+        font-size: 72px;
+        font-family: "Kaushan Script";
+        color: #FFFFFF;
+        text-align: center;
+        margin-bottom: 30px;
+        @media only screen and (max-width: 991px){
+            font-size: 45px;
+        }
+        @media only screen and (max-width: 600px){
+            font-size: 35px;
+            margin-bottom: 17px;
+        }
+    }
+    &__head {
+        font-size: 150px;
+        font-family: "Montserrat";
+        color: #FFFFFF;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+        max-width: 1000px;
+        line-height: 0.93;
+        margin-bottom: 30px;
+        @media only screen and (max-width: 991px){
+            font-size: 90px;
+        }
+        @media only screen and (max-width: 600px){
+            font-size: 55px;
+        }
+    }
+    &__line {
+        @include horizontal-line($main-red);
+        margin: 0px;
+        margin-bottom: 40px;
+    }
+    &__carousel-inner {
+        @include main-gradient;
+    }
+    &__carousel-item {
+        z-index: -1;
+        height: 1000px;
+        width: 100%;
+        @media only screen and (max-width: 991px){
+            height: 700px;
+        }
+        @media only screen and (max-width: 991px){
+            height: 560px;
+        }
+        & img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__button {
+        min-width: 160px;
+        padding: 12px;
+        border: 3px solid #FFFFFF;
+        color: #FFFFFF;
+        font-size: 14px;
+        font-family: "Montserrat";
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 100%;
+    }
+    &__carousel-indicators {
+        justify-content: space-around;
+        bottom: 30px;
+        column-gap: 10px;
+        flex-wrap: wrap;
+        row-gap: 40px;
+        @media only screen and (max-width: 991px){
+            margin-left: 3%;
+            margin-right: 3%;
+        }
+        @media only screen and (max-width: 991px){
+            row-gap: 30px;
+        }
+        & li {
+            background-color: transparent;
+            width: 100%;
+            max-width: 280px;
+            min-width: 150px;
+            flex-basis: 280px;
+            flex-grow: 1;
+            text-indent: 0px;
+            &:after,
+            &:before {
+                content: none;
+            }
+            &.active {
+                & hr {
+                    background-image: -moz-linear-gradient(90deg, $main-red 0%, $main-red 25%, rgba(255,255,255,0) 25%, rgba(255,255,255,0) 100%);
+                    background-image: -webkit-linear-gradient(90deg, $main-red 0%, $main-red 25%, rgba(255,255,255,0) 25%, rgba(255,255,255,0) 100%);
+                    background-image: linear-gradient(90deg, $main-red 0%, $main-red 25%, rgba(255,255,255,0) 25%, rgba(255,255,255,0) 100%);
+                }
+            }
+            & hr {
+                margin: 0px;
+                width: 100%;
+                height: 3px;
+                background-color: rgba(255,255,255,0.5);
+                transition: all 400ms ease;
+                margin-bottom: 5px;
+            }
+            & .num {
+                margin-right: 5px;
+                margin-bottom: 0px;
+                font-size: 24px;
+                font-family: "Montserrat";
+                color: #FFFFFF;
+                font-weight: bold;
+                text-transform: uppercase;
+                line-height: 100%;
+                text-align: left;
+                @media only screen and (max-width: 991px){
+                    font-size: 20px;
+                }
+                
+            }
+            & .text {
+                margin-right: 5px;
+                margin-bottom: 0px;
+                font-size: 19px;
+                font-family: "Montserrat";
+                color: #FFFFFF;
+                font-weight: 300;
+                text-transform: uppercase;
+                line-height: 100%;
+                text-align: left;
+                @media only screen and (max-width: 991px){
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+

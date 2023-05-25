@@ -1,0 +1,93 @@
+.team {
+    width: 100%;
+    padding: 100px 0 120px;
+    @media only screen and (max-width: 600px) {
+        padding: 45px 0 60px;
+    }
+    &__container {
+        @include flex-column-center-center
+    }
+    @include block-head;
+    &__members {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+    &__link {
+        font-size: 20px;
+        font-family: "Montserrat";
+        color: #f38181;
+        line-height: 100%;
+        text-align: center;
+        margin-bottom: 0px;
+        margin-top: 40px;
+    }
+}
+.member {
+    $self: &;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__photo {
+        width: 380px;
+        height: 470px;
+        margin-bottom: 30px;
+        @media only screen and (max-width: 600px) {
+            width: 90vw;
+            height:  calc(90vw*1.23);
+            margin-bottom: 10px;
+        }
+    }
+    &__content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    &__social-box {
+        width: 56px;
+        height: 56px;
+        background-color: $main-yellow;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 400ms ease;
+        &:not(:last-of-type) {
+            border-left: 1px solid #f9bd87;
+        }
+        &:hover {
+            background-color: $main-red;
+            border: 0px;
+            #{$self}__social-icon {
+                fill: #FFFFFF
+            }
+        }
+    }
+    &__social-icon {
+        fill: $main-red;
+    }
+    &__name {
+        font-size: 14px;
+        font-family: "Montserrat";
+        color: rgb(51, 51, 51);
+        text-transform: uppercase;
+        line-height: 1.2;
+        text-align: center;
+        margin-bottom: 10px;
+        @media only screen and (max-width: 600px) {
+            margin-bottom: 5px;
+        }
+    }
+    &__post {
+        font-size: 15px;
+        font-family: "Roboto Light";
+        color: rgb(153, 153, 153);
+        font-style: italic;
+        line-height: 100%;
+        text-align: center;
+        margin-bottom: 0px;
+    }
+}
+

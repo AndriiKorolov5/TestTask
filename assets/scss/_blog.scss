@@ -1,0 +1,138 @@
+.blog {
+    width: 100%;
+    padding: 110px 0;
+    @media only screen and (max-width: 800px) {
+        padding: 55px 0;;
+    }
+    &__container {
+        @include flex-column-center-center;
+    }
+    @include block-head;
+    &__posts {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        column-gap: 20px;
+        row-gap: 30px;
+    }
+    &__post {
+        width: 380px;
+        @media only screen and (max-width: 800px) {
+            width: 300px;
+        }
+    }
+    &__link {
+        font-size: 20px;
+        font-family: "Montserrat";
+        color: $main-red;
+        line-height: 100%;
+        text-align: center;
+        margin-bottom: 0px;
+        margin-top: 40px;
+    }
+}
+.post {
+    @include flex-column-center-center;
+    justify-content: space-between;
+    &__image-wrap{
+        width: 100%;
+        height: 240px;
+        position: relative;
+        margin-bottom: 18px;
+        @media only screen and (max-width: 800px) {
+            height: 180px;
+        }
+    }
+    &__date {
+        width: 60px;
+        height: 70px;
+        @include flex-column-center-center;
+        background-color: $main-green;
+        position: absolute;
+        bottom: 10px;
+        left: -10px;
+    }
+    &__date-num {
+        font-size: 30px;
+        font-family: "Montserrat";
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 100%;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+    &__date-month {
+        font-size: 16px;
+        font-family: "Montserrat";
+        color: rgb(255, 255, 255);
+        font-weight: 400;
+        font-style: italic;
+        line-height: 100%;
+        text-align: center;
+        margin-bottom: 0px;
+    }
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+    &__desc {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    &__head {
+        font-size: 14px;
+        font-family: "Montserrat";
+        color: rgb(51, 51, 51);
+        text-transform: uppercase;
+        line-height: 100%;
+        text-align: left;
+        font-weight: 700;
+        margin-bottom: 18px;
+    }
+    &__text {
+        font-size: 15px;
+        font-family: "Roboto";
+        color: rgb(153, 153, 153);
+        line-height: 1.6;
+        text-align: left;
+        font-weight: 400;
+        margin-bottom: 18px;
+    }
+    &__line {
+        width: 100%;
+        height: 1px;
+        background-color: #e5e5e5;
+        margin-top: 0px;
+        margin-bottom: 20px;
+            
+    }
+    &__info {
+        display: flex;
+        column-gap: 20px;
+    }
+    &__info-cell {
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+    }
+    &__info-icon {
+        fill: $main-green;
+    }
+    &__info-num {
+        font-size: 15px;
+        font-family: "Roboto Light";
+        color: rgb(153, 153, 153);
+        font-style: italic;
+        line-height: 100%;
+        margin-bottom: 0px;
+    }
+}
+

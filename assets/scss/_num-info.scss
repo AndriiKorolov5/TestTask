@@ -1,0 +1,68 @@
+.num-info {
+    width: 100%;
+    background-color: $main-green;
+    &__container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    &__item {
+        width: 100%;
+        max-width: 300px;
+        min-width: 240px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-basis: 240px;
+        flex-grow: 1;
+        padding: 90px 10px;
+        position: relative;
+        @media only screen and (max-width: 800px){
+            padding: 50px 10px;
+        }
+        &:after {
+            content: '';
+            height: 100%;
+            width: 1px;
+            background-color: #b5eae0;
+            position: absolute;
+            top: 0px;
+            right: -1px;
+        }
+        &:before{
+            content: '';
+            height: 100%;
+            width: 1px;
+            background-color: #b5eae0;
+            position: absolute;
+            top: 0px;
+            left: -1px;
+        }
+    }
+    &__num {
+        font-size: 72px;
+        font-family: "Montserrat";
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+        @media only screen and (max-width: 800px){
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+    }
+    &__text {
+        font-size: 14px;
+        font-family: "Montserrat";
+        color: rgb(255, 255, 255);
+        text-transform: uppercase;
+        line-height: 100%;
+        text-align: center;
+        margin-bottom: 0px;
+    }
+}
+

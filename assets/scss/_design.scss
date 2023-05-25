@@ -1,0 +1,50 @@
+.design {
+    width: 100%;
+    background-image: url(../img/design-bg.jpg);
+    background-color: rgba(255,255,255,0.8);
+    background-size: cover;
+    background-position: center;
+    padding-top: 100px;
+    background-blend-mode: color;
+    margin-bottom: 40px;
+    @media only screen and (max-width: 800px){
+        padding-top: 45px;
+    }
+    &__container {
+        @include flex-column-center-center
+    }
+    @include block-head;
+    &__devices {
+        position: relative;
+        margin-right: 60px;
+    }
+    &__i-pad {
+        width: 477px;
+        height: 582px;
+        @media only screen and (max-width: 800px){
+            width: 65vw;
+            height: calc(65vw*1.22);
+        }
+        @media only screen and (max-width: 600px){
+            width: 75vw;
+            height: calc(75vw*1.22);
+        }
+    }
+    &__i-phone {
+        position: absolute;
+        width: 209px;
+        height: 438px;
+        bottom: -40px;
+        right: -120px;
+        @media only screen and (max-width: 800px) {
+            width: 25vw;
+            height: calc(25vw*2.09);
+        }
+        @media only screen and (max-width: 600px) {
+            width: 30vw;
+            height: calc(30vw*2.09);
+            right: -60px;
+        }
+    }
+}
+

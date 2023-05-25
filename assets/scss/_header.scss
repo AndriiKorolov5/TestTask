@@ -1,0 +1,123 @@
+.header {
+    width: 100%;
+    padding: 29px 0;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 99;
+    @media only screen and (max-width: 992px){
+        padding: 15px 0;
+    }
+    &__container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    &__main-link {
+        display: block;
+    }
+    &__logo {
+        width: 86px;
+        height: 23px;
+    }
+    &__menu {
+        justify-content: flex-end;
+    }
+    &__button-elems {
+        width: 30px;
+        height: 5px;
+        background-color: #FFFFFF;
+        display: block;
+        border-radius: 1px;
+        &:not(:last-of-type) {
+            margin-bottom: 6px;
+        }
+    }
+}
+.menu {
+    $self: &;
+    column-gap: 40px;
+    flex-wrap: wrap;
+    &__list {
+        margin-bottom: 0px;
+        display: flex;
+        @media only screen and (max-width: 991px){
+            flex-direction: column;
+            row-gap: 7px;
+            margin-bottom: 7px;
+        }
+    }
+    &__list-item:not(:last-of-type) {
+        margin-right: 40px;
+    }
+    &__list-link {
+        display: block;
+        position: relative;
+        font-size: 14px;
+        line-height: 125%;
+        font-family: "Montserrat";
+        color: #FFFFFF;
+        text-transform: uppercase;
+        transition: all 400ms ease;
+        &:before {
+            content: '';
+            width: 100%;
+            height: 3px;
+            position: absolute;
+            bottom: -3px;
+            background-color: #FFFFFF;
+            opacity: 0.0;
+            transition: all 400ms ease;
+        }
+        &:hover {
+            color: $main-yellow;
+            text-decoration: none;
+            &::before {
+                bottom: -7px;
+                background-color: $main-yellow;
+                opacity: 1.0;
+            }
+        }
+    }
+    &__link {
+        display: block;
+        width: 18px;
+        height: 18px;
+        position: relative;
+        &:before {
+            content: '';
+            width: 100%;
+            height: 3px;
+            position: absolute;
+            bottom: -3px;
+            background-color: #FFFFFF;
+            opacity: 0.0;
+            transition: all 400ms ease;
+        }
+        &:hover {
+            #{$self}__link-img {
+                
+                fill: $main-yellow;
+            }
+            &::before {
+                bottom: -7px;
+                background-color: $main-yellow;
+                opacity: 1.0;
+            }
+        }
+        @media only screen and (max-width: 992px){
+            &:not(:last-of-type) {
+                margin-right: 10px;
+            }
+        }
+    }
+    &__link-img {
+        fill: #FFFFFF;
+        width: 100%;
+        height: 100%;
+    }
+}
+

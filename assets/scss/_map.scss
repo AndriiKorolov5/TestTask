@@ -1,0 +1,31 @@
+.map {
+    width: 100%;
+    padding: 60px 0;
+    background-image: url(../img/map-bg.jpg);
+    background-color: rgba(255,255,255,0.8);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: color;
+    &__container {
+        @include flex-column-center-center;
+    }
+    &__icon {
+        fill: $main-red;
+        margin-bottom: 20px;
+    }
+    &__text {
+        font-size: 24px;
+        font-family: "Montserrat";
+        color: $main-red;
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    &__line {
+        @include horizontal-line($main-red);
+        margin-bottom: 0px;
+    }
+}
+
